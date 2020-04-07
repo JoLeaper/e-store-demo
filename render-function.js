@@ -5,7 +5,7 @@ function renderCard(card) {
     const cardCategory = document.createElement('p');
     const cardDescription = document.createElement('p');
     const cardPrice = document.createElement('p');
-    const button = document.createElement("button");
+    const button = document.createElement('button');
 
     cardName.textContent = card.name;
     cardImage.src = card.image;
