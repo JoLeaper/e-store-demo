@@ -8,5 +8,19 @@ header {
 
 
 body {
-    background-image 
+    background-image: url('https://images5.alphacoders.com/967/thumb-1920-967270.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+footer {
+    background-color: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
 }

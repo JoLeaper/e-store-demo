@@ -20,6 +20,12 @@ img {
     justify-content: flex;
     display: flex;
     flex-wrap: flex;
+    padding-inline-start: 0;
+    margin-block-start: 0em;
+    background: -webkit-linear-gradient(rgba(248, 243, 234, 0.9), rgb(248, 243, 234, 0.9));
+    width: fit-content;
+
+    
 }
 
 h3 {
@@ -33,5 +39,4 @@ li {
     padding: 20px;
     width: 300px;
     height: auto;
-    
 }
