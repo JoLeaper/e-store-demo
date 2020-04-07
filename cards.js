@@ -74,9 +74,6 @@ const cards = [
         price: 10
 
     },
-
-    //`[Requirement]: Send the top card from your Deck to the Graveyard. \n[Effect]: This card gains 300 ATK for each Attribute monster in your graveyard.`
-
 ];
 
 export default cards;
