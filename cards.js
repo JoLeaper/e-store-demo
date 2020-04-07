@@ -59,7 +59,7 @@ const cards = [
         image: './assets/decode-talker.png',
         description: `2+ Effect Monsters
         Gains 500 ATK for each monster it points to. When your opponent activates a card or effect that targets a card(s) you control (Quick Effect): You can Tribute 1 monster this card points to; negate the activation, and if you do, destroy that card.`,
-        Category: 'Monster',
+        category: 'Monster',
         price: 20
 
     },
