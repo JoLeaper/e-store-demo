@@ -3,6 +3,7 @@
 
 import renderCard from '../render-function.js';
 import findById from '../findById.js';
+import calcLineItem from '../calcLineItem.js';
 
 const test = QUnit.test;
 
@@ -74,4 +75,22 @@ test('findById', function(assert) {
     assert.equal(expected2, result2);
     assert.equal(expected3, result3);
     assert.equal(expected4, result4);
+});
+
+
+test('calcLineItem', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const cardQuantity = 7;
+    const cardPrice = 50;
+
+    const expected = `$350.00`;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const result = calcLineItem(cardQuantity, cardPrice);
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(expected, result);
 });
