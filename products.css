@@ -15,17 +15,17 @@ img {
 } */
 
 #card-container {
+    margin: 0 auto;
     list-style-type: none;
     text-align: center;
     justify-content: flex;
-    display: flex;
-    flex-wrap: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-inline-start: 0;
+    padding-bottom: 50px;
     margin-block-start: 0em;
     background: -webkit-linear-gradient(rgba(248, 243, 234, 0.9), rgb(248, 243, 234, 0.9));
     width: fit-content;
-
-    
 }
 
 h3 {
@@ -39,4 +39,7 @@ li {
     padding: 20px;
     width: 300px;
     height: auto;
+    margin-top: 3px;
+    margin-left:5px;
+    margin-right:5px;
 }
