@@ -2,7 +2,7 @@ const cards = [
     {
         id: 1,
         name: 'Dark Magician',
-        image: './assets/dark-magician.png',
+        image: './assets/dark-magician2.png',
         description: 'The ultimate wizard in terms of attack and defense.',
         category: 'Monster',
         price: 70
@@ -69,14 +69,13 @@ const cards = [
         id: 7,
         name: 'Sevens Road Magician',
         image: './assets/seven-roads.png',
-        description: `[Requirement]: Send the top card from your Deck to the Graveyard.
-        [Effect]: This card gains 300 ATK for each Attribute monster in your graveyard.`,
+        description: '[Requirement]: Send the top card from your Deck to the Graveyard.\n' + '\n[Effect]: This card gains 300 ATK for each Attribute monster in your graveyard.',
         category: 'Monster',
         price: 10
 
     },
 
-    
+    //`[Requirement]: Send the top card from your Deck to the Graveyard. \n[Effect]: This card gains 300 ATK for each Attribute monster in your graveyard.`
 
 ];
 
