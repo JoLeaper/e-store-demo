@@ -1,11 +1,11 @@
-import cards from './cards.js';
-import cart from './cart.js';
+import cards from '../data/cards.js';
+import cart from '../data/cart.js';
 
-import findById from './findById.js';
+import findById from '../findById.js';
 
-import renderLineItem from './render-line-items.js';
+import renderLineItem from '../render-line-items.js';
 
-import calcOrderTotal from './calc-order-total.js';
+import calcOrderTotal from '../calc-order-total.js';
 
 const checkOutTable = document.getElementById('checkout');
 const totalSale = document.getElementById('total-sale');
