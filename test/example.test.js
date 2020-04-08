@@ -114,7 +114,7 @@ test('renderLineItem', function(assert) {
 
     };
 
-    const expected = '<tr><td>Elemental HERO Neos</td><td>2</td><td>$ 120</td></tr>'
+    const expected = '<tr><td>Elemental HERO Neos</td><td>2</td><td>$ 120.00</td></tr>'
     ;
 
     //Act 
@@ -175,7 +175,7 @@ test('calcOrderTotal', function(assert) {
 
     }];
 
-    const expected = `$ 610`;
+    const expected = `$ 610.00`;
     //Act 
     // Call the function you're testing and set the result to a const
     const result = calcOrderTotal(cart, cards);
