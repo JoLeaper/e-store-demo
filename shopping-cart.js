@@ -9,6 +9,7 @@ import calcOrderTotal from './calc-order-total.js';
 
 const checkOutTable = document.getElementById('checkout');
 const totalSale = document.getElementById('total-sale');
+const purchaseButton = document.getElementById('purchase');
 
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
@@ -17,3 +18,8 @@ for (let i = 0; i < cart.length; i++) {
     checkOutTable.appendChild(cardRow);
     totalSale.textContent = calcOrderTotal(cart, cards);
 }
+
+
+purchaseButton.innerHTML = 'Purchase';
+purchaseButton.addEventListener('click', function() {
+});
