@@ -4,6 +4,7 @@
 import renderCard from '../render-function.js';
 import findById from '../findById.js';
 import calcLineItem from '../calcLineItem.js';
+import renderLineItem from '../render-line-items.js';
 
 const test = QUnit.test;
 
@@ -89,6 +90,36 @@ test('calcLineItem', function(assert) {
     //Act 
     // Call the function you're testing and set the result to a const
     const result = calcLineItem(cardQuantity, cardPrice);
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(expected, result);
+});
+
+test('renderLineItem', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const cartItem = {
+        id: 1,
+        quantity: 2
+    };
+    const cardObject = {
+        id: 2,
+        name: 'Elemental HERO Neos',
+        image: './assets/neos.png',
+        description: 'A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.',
+        category: 'Monster',
+        price: 60
+
+    };
+
+    const expected = '<tr><td>Elemental HERO Neos</td><td>2</td><td>60</td></tr>'
+    ;
+
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const renderedItem = renderLineItem(cartItem, cardObject);
+    const result = renderedItem.outerHTML;
 
     //Assert
     // Make assertions about what is expected valid result

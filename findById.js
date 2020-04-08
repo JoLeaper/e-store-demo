@@ -5,6 +5,7 @@ function findById(cards, id) {
         const card = cards[i];
         if (card.id === id){
             cardObject = card;
+            break;
         }    
     }
     return cardObject;
