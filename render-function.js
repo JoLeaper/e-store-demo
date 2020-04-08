@@ -1,4 +1,6 @@
 import findById from '../findById.js';
+import create100Selects from './create-100-selects.js';
+import { getCart, addToCart } from './cart-api.js';
 
 function renderCard(card) {
     const li = document.createElement('li');
@@ -9,6 +11,7 @@ function renderCard(card) {
     const cardPrice = document.createElement('p');
     // const cardsToPurchase = document.createElement('button')
     const button = document.createElement('button');
+    const selector = document.createElement('select');
 
     cardName.textContent = card.name;
     cardImage.src = card.image;
@@ -16,36 +19,19 @@ function renderCard(card) {
     cardDescription.textContent = card.description;
     cardPrice.textContent = `$${card.price}`;
     button.innerHTML = 'Add';
+
+    let newSelector = create100Selects(selector);
+    let jsonObject = localStorage.getItem('cart');
     button.addEventListener('click', function() {
-        let jsonObject = localStorage.getItem('cart');
-        let cart;
-
-        if (jsonObject) {
-            cart = JSON.parse(jsonObject);
-        } else {
-            cart = [];
-        }
-
+  
+        let cart = getCart(jsonObject);
         let lineItem = findById(cart, card.id);
 
-        if (!lineItem) {
-            lineItem = {
-                id: card.id,
-                quantity: 1
-            };
-
-            cart.push(lineItem);
-        } else {
-            lineItem.quantity++;
-        }
-
-        jsonObject = JSON.stringify(cart);
-        localStorage.setItem('cart', jsonObject);
-
+        addToCart(card, cart, lineItem, newSelector);
     });
 
 
-    li.append(cardName, cardImage, cardCategory, cardDescription, cardPrice, button);
+    li.append(cardName, cardImage, cardCategory, cardDescription, cardPrice, button, selector);
     
     return li;
 }

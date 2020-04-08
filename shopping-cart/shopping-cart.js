@@ -5,6 +5,7 @@ import findById from '../findById.js';
 import renderLineItem from '../render-line-items.js';
 
 import calcOrderTotal from '../calc-order-total.js';
+import { clearCart } from '../cart-api.js';
 
 const checkOutTable = document.getElementById('checkout');
 const totalSale = document.getElementById('total-sale');
@@ -33,7 +34,5 @@ if (cart === []){
 
 purchaseButton.addEventListener('click', function() {
     alert(JSON.stringify(cart, true, 2));
-    localStorage.clear();
-    location.assign('../index.html');
-    console.log('here');
+    clearCart();
 });
