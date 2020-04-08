@@ -5,6 +5,7 @@ import renderCard from '../render-function.js';
 import findById from '../findById.js';
 import calcLineItem from '../calcLineItem.js';
 import renderLineItem from '../render-line-items.js';
+import calcOrderTotal from '../calc-order-total.js';
 
 const test = QUnit.test;
 
@@ -85,7 +86,7 @@ test('calcLineItem', function(assert) {
     const cardQuantity = 7;
     const cardPrice = 50;
 
-    const expected = `$350.00`;
+    const expected = 350.00;
 
     //Act 
     // Call the function you're testing and set the result to a const
@@ -113,13 +114,71 @@ test('renderLineItem', function(assert) {
 
     };
 
-    const expected = '<tr><td>Elemental HERO Neos</td><td>2</td><td>60</td></tr>'
+    const expected = '<tr><td>Elemental HERO Neos</td><td>2</td><td>$ 120</td></tr>'
     ;
 
     //Act 
     // Call the function you're testing and set the result to a const
     const renderedItem = renderLineItem(cartItem, cardObject);
     const result = renderedItem.outerHTML;
+
+    //Assert
+    // Make assertions about what is expected valid result
+    assert.equal(expected, result);
+});
+
+test('calcOrderTotal', function(assert) {
+    //Arrange
+    // Set up your parameters and expectations
+    const cart = [
+        {
+            id: 1,
+            quantity: 2
+        },
+        {
+            id: 2,
+            quantity: 2
+        },
+        {
+            id: 3,
+            quantity: 7
+        },
+    ];
+    
+    const cards = [{
+        id: 1,
+        name: 'Dark Magician',
+        image: './assets/dark-magician2.png',
+        description: 'The ultimate wizard in terms of attack and defense.',
+        category: 'Monster',
+        price: 70
+    },
+
+    {
+        id: 2,
+        name: 'Elemental HERO Neos',
+        image: './assets/neos.png',
+        description: 'A new Elemental HERO has arrived from Neo-Space! When he initiates a Contact Fusion with a Neo-Spacian his unknown powers are unleashed.',
+        category: 'Monster',
+        price: 60
+
+    },
+
+    {
+        id: 3,
+        name: 'Stardust Dragon',
+        image: './assets/stardust-dragon.png',
+        description: `1 Tuner + 1+ non-Tuner monsters
+        When a card or effect is activated that would destroy a card(s) on the field (Quick Effect): You can Tribute this card; negate the activation, and if you do, destroy it. During the End Phase, if this effect was activated this turn (and was not negated): You can Special Summon this card from your GY.`,
+        category: 'Monster',
+        price: 50
+
+    }];
+
+    const expected = `$ 610`;
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const result = calcOrderTotal(cart, cards);
 
     //Assert
     // Make assertions about what is expected valid result

@@ -1,7 +1,7 @@
 function calcLineItem(cardQuantity, cardPrice) {
     let cardTotal = cardQuantity * cardPrice;
-    let decimalTotal = cardTotal.toFixed(2);
-    return `$${decimalTotal}`;
+    let decimalTotal = Math.round(cardTotal * 100) / 100;
+    return decimalTotal;
 }
 
 
