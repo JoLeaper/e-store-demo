@@ -1,5 +1,5 @@
-import renderCard from './render-function.js';
-import cards from './data/cards.js';
+import renderCard from '../render-function.js';
+import cards from '../data/cards.js';
 
 const cardContainer = document.getElementById('card-container');
 
