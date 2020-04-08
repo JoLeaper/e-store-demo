@@ -1,3 +1,5 @@
+import calcLineTotal from './calcLineItem.js';
+
 function renderLineItem(cartItem, cardObject) {
     const tr = document.createElement('tr');
     const itemName = document.createElement('td');
@@ -8,7 +10,7 @@ function renderLineItem(cartItem, cardObject) {
     itemName.textContent = cardObject.name;
     itemQuantity.textContent = cartItem.quantity;
     itemPrice.textContent = cardObject.price;
-    lineItemPrice.textContent = 0;
+    lineItemPrice.textContent = calcLineTotal(cartItem.quantity, cardObject.price);
 
     tr.append(itemName, itemQuantity, lineItemPrice);
     return tr;

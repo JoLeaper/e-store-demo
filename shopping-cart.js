@@ -11,9 +11,6 @@ const checkOutTable = document.getElementById('checkout');
 for (let i = 0; i < cart.length; i++) {
     const cartItem = cart[i];
     const cardToAdd = findById(cards, cartItem.id); 
-    const lineTotal = calcLineItem(cartItem.quantity, cardToAdd.price);
     const cardRow = renderLineItem(cartItem, cardToAdd);
-    cardRow.price = lineTotal;
-    
     checkOutTable.appendChild(cardRow);
 }
