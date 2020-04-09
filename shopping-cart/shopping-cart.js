@@ -1,4 +1,4 @@
-import cards from '../data/cards.js';
+import getCards from '../getCards.js';
 import findById from '../findById.js';
 import renderLineItem from '../render-line-items.js';
 import calcOrderTotal from '../calc-order-total.js';
@@ -6,6 +6,7 @@ import { clearCart } from '../cart-api.js';
 
 const checkOutTable = document.getElementById('checkout');
 const totalSale = document.getElementById('total-sale');
+const cards = getCards();
 
 const purchaseButton = document.getElementById('purchase');
 purchaseButton.innerHTML = 'Purchase';

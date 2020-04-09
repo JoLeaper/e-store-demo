@@ -7,6 +7,7 @@ import calcLineItem from '../calcLineItem.js';
 import renderLineItem from '../render-line-items.js';
 import calcOrderTotal from '../calc-order-total.js';
 import addProduct from '../admin/addProduct.js';
+import getCards from '../getCards.js';
 
 const test = QUnit.test;
 
@@ -192,6 +193,8 @@ test('calcOrderTotal', function(assert) {
 test('addProduct', function(assert) {
     //Arrange
     // Set up your parameters and expectations
+    getCards();
+
     const darkMagician = {
         id: 9,
         name: 'Dark Magician',
@@ -206,11 +209,11 @@ test('addProduct', function(assert) {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const result = addProduct(darkMagician);
-    console.log(result);
+    const resultArray = addProduct(darkMagician);
+    const result = JSON.stringify(resultArray);
     
     //Assert
     // Make assertions about what is expected valid result
     // eslint-disable-next-line no-useless-escape
-    assert.equal(expected, result);
+    assert.deepEqual(expected, result);
 });
