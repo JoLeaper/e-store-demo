@@ -1,7 +1,22 @@
 #cart-table {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    color: white;
+    margin-left:auto; 
+    margin-right:auto;
     background: -webkit-linear-gradient(rgba(248, 243, 234, 0.9), rgb(248, 243, 234, 0.9));
+    border: 1px solid #ddd;
+    width: 75%;
+    text-align: center
 }
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+  #total, #total-sale{
+      font-weight: bold;
+
+  }
+
+ button {
+     display: block;
+     margin: auto;
+ }

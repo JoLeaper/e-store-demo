@@ -33,6 +33,8 @@ if (cart === []){
 }
 
 purchaseButton.addEventListener('click', function() {
+    console.log(checkOutTable);
     alert(JSON.stringify(cart, true, 2));
     clearCart();
+
 });

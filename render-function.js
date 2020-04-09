@@ -20,13 +20,17 @@ function renderCard(card) {
     button.innerHTML = 'Add';
 
     let newSelector = create100Selects(selector);
-    let jsonObject = localStorage.getItem('cart');
+
+    
+
     button.addEventListener('click', function() {
-  
+        let jsonObject = localStorage.getItem('cart');
         let cart = getCart(jsonObject);
+
         let lineItem = findById(cart, card.id);
 
         addToCart(card, cart, lineItem, newSelector);
+
     });
 
 

@@ -7,15 +7,15 @@ export function getCart(jsonObject) {
 }
 
 export function addToCart(card, cart, lineItem, selector) {
+
     if (!lineItem) {
         lineItem = {
             id: card.id,
             quantity: Number(selector.value)
-        };
-
+        };   
         cart.push(lineItem);
     } else {
-        lineItem.quantity += Number(selector.value);
+        lineItem.quantity = lineItem.quantity + Number(selector.value);
     }
 
     let jsonObject = JSON.stringify(cart);
