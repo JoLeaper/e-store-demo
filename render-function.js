@@ -1,5 +1,5 @@
 import findById from './findById.js';
-import create100Selects from './create-100-selects.js';
+import create99Selects from './create-99-selects.js';
 import { getCart, addToCart } from './cart-api.js';
 
 function renderCard(card) {
@@ -19,9 +19,7 @@ function renderCard(card) {
     cardPrice.textContent = `$${card.price}`;
     button.innerHTML = 'Add';
 
-    let newSelector = create100Selects(selector);
-
-    
+    let newSelector = create99Selects(selector);
 
     button.addEventListener('click', function() {
         let jsonObject = localStorage.getItem('cart');

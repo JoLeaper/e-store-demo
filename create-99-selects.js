@@ -1,4 +1,4 @@
-function create100Selects(selector) {
+function create99Selects(selector) {
     for (let i = 1; i < 100; i++) {
         let option = document.createElement('option');
         option.text = `${i}`;
@@ -8,4 +8,4 @@ function create100Selects(selector) {
     return selector;
 }
 
-export default create100Selects;
+export default create99Selects;

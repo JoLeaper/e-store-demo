@@ -1,0 +1,11 @@
+input[type=text], select {
+    display: block;
+}
+
+body {
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+}
