@@ -30,7 +30,9 @@ test('renderCard', function(assert) {
     
     //Assert
     // Make assertions about what is expected valid result
+    /*eslint-disable */
     assert.equal(expected, result);
+    /*eslint-enable */
 });
 
 test('findById', function(assert) {
