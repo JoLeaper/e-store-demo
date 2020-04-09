@@ -1,0 +1,1 @@
+import rawCards from './data/cards.js';
