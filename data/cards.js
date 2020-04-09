@@ -74,6 +74,17 @@ const cards = [
         price: 10
 
     },
+
+    {
+
+        id: 8,
+        name: 'Blue-Eyes White Dragon',
+        image: '../assets/blue-eyes.png',
+        description: 'The legendary dragon is a powerful engine of destruction. Virtually invincible, very few have faced this awesome creature and lived to tell the tale.',
+        category: 'Monster',
+        price: 100
+
+    },
 ];
 
 export default cards;
