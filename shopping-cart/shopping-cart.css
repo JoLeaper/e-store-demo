@@ -1,0 +1,7 @@
+#cart-table {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+    background: -webkit-linear-gradient(rgba(248, 243, 234, 0.9), rgb(248, 243, 234, 0.9));
+}

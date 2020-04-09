@@ -1,9 +1,3 @@
-import cards from './data/cards.js';
-import create100Selects from './create-100-selects.js';
-// getCart
-// addToCart
-// clearCart
-
 export function getCart(jsonObject) {
     let cart = [];
     if (jsonObject) {

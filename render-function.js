@@ -1,4 +1,4 @@
-import findById from '../findById.js';
+import findById from './findById.js';
 import create100Selects from './create-100-selects.js';
 import { getCart, addToCart } from './cart-api.js';
 
@@ -9,7 +9,6 @@ function renderCard(card) {
     const cardCategory = document.createElement('p');
     const cardDescription = document.createElement('p');
     const cardPrice = document.createElement('p');
-    // const cardsToPurchase = document.createElement('button')
     const button = document.createElement('button');
     const selector = document.createElement('select');
 
