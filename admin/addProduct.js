@@ -11,5 +11,6 @@ export default function addProduct(productObject) {
     const stringProducts = JSON.stringify(cards);
     localStorage.setItem('CARDS', stringProducts);
 
+
     return cards;
 }
