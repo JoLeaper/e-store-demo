@@ -1,6 +1,4 @@
-import findById from './findById.js';
-import create99Selects from './create-99-selects.js';
-import { getCart, addToCart } from './cart-api.js';
+import { removeFromCatalogue } from './removeFromCatalogue.js';
 
 function renderCard(card) {
     const li = document.createElement('li');
@@ -17,23 +15,16 @@ function renderCard(card) {
     cardCategory.textContent = card.category;
     cardDescription.textContent = card.description;
     cardPrice.textContent = `$${card.price}`;
-    button.innerHTML = 'Add';
-
-    let newSelector = create99Selects(selector);
-
-    button.addEventListener('click', function() {
-        let jsonObject = localStorage.getItem('cart');
-        let cart = getCart(jsonObject);
-
-        let lineItem = findById(cart, card.id);
-
-        addToCart(card, cart, lineItem, newSelector);
-
-    });
+    button.innerHTML = 'Remove';
 
 
     li.append(cardName, cardImage, cardCategory, cardDescription, cardPrice, button, selector);
     
+    
+    button.addEventListener('click', function() {
+        removeFromCatalogue(li, card.name);
+    });
+
     return li;
 }
 

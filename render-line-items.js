@@ -9,7 +9,7 @@ function renderLineItem(cartItem, cardObject) {
 
     itemName.textContent = cardObject.name;
     itemQuantity.textContent = cartItem.quantity;
-    itemPrice.textContent = `$ ${cardObject.price.toFixed(2)}`;
+    itemPrice.textContent = `$ ${Number(cardObject.price).toFixed(2)}`;
     let lineTotal = calcLineTotal(cartItem.quantity, cardObject.price);
     lineItemPrice.textContent = '$ ' + lineTotal.toFixed(2);
 

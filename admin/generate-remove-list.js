@@ -1,4 +1,4 @@
-import renderCard from '../render-function.js';
+import renderCard from './new-render-function.js';
 import getCards from '../getCards.js';
 const cards = getCards();
 
@@ -10,3 +10,4 @@ for (let i = 0; i < cards.length; i++) {
     
     cardContainer.appendChild(cardList);
 }
+

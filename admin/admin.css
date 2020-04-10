@@ -1,3 +1,19 @@
+input[type=text], select {
+    display: block;
+}
+
+body {
+    text-align: center;
+    text-align:center;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    display: inline-block;
+    background: -webkit-linear-gradient(rgba(248, 243, 234, 0.9), rgb(248, 243, 234, 0.9));
+}
+
 img {
     width: 200px;
     height: auto;
@@ -35,5 +51,5 @@ li {
 }
 
 li select {
-    width: 40px;
+    visibility: hidden;
 }

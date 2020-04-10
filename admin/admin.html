@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="admin.css">
+    <title>Yu-Gi-Oh!</title>
+</head>
+
+<header>
+    <a href=index.html>Kame Game</a>
+    <a href=products/products.html>Products</a>
+    <a href=shopping-cart/shopping-cart.html>Shopping Cart</a>
+</header>
+
+<body>
+    <div class="adding-a-product">
+        <form id ="add-product">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <label for="id">Image: </label>
+            <input type="text" id="image" name="image">
+            <label for="id">Description: </label>
+            <input type="text" id="description" name="description">
+            <label for="id">Category: </label>
+            <input type="text" id="category" name="category">
+            <label for="id">Price: </label>
+            <input type="text" id="price" name="price">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div class ="removing-a-product">
+        <ul id="card-container">
+        </ul>
+    </div>
+<script type="module" src="admin.js"></script>
+<script type="module" src="generate-remove-list.js"></script>
+</body>
+
+<footer>
+</footer>
+
+</html>
